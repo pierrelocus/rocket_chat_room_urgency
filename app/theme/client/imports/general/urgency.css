@@ -1,0 +1,31 @@
+.icon-room-mark-normal i {
+	color: #55efc4;
+}
+
+.icon-room-mark-moderate i {
+	color: #fdcb6e;
+}
+
+.icon-room-mark-urgent i {
+	color: #d63031;
+}
+
+.room-mark-normal {
+	background-color: inherit;
+}
+
+.room-mark-moderate {
+	background-color: #fdcb6e;
+}
+
+.room-mark-urgent {
+	background-color: #d63031;
+}
+
+a[room-urgency="rs-urgency-urgent"] {
+	background-color: #d63031!important;
+}
+
+a[room-urgency="rs-urgency-moderate"] {
+	background-color: #fdcb6e!important;
+}
