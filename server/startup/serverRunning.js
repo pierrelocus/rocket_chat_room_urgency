@@ -36,6 +36,7 @@ Meteor.startup(function () {
 			`       Process Port: ${process.env.PORT}`,
 			`           Site URL: ${settings.get('Site_Url')}`,
 			`   ReplicaSet OpLog: ${oplogEnabled ? 'Enabled' : 'Disabled'}`,
+			`	=== Custom for Relatient === `
 		];
 
 		if (Info.commit && Info.commit.hash) {

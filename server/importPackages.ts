@@ -111,3 +111,4 @@ import '../app/custom/server';
 import '../app/authentication/server';
 import '../app/voip/server/startup';
 import '../app/room-mark-urgency/server';
+import '../app/transcriptPDF/server';

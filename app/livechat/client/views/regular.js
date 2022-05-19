@@ -12,3 +12,6 @@ import './app/tabbar/contactChatHistoryMessages';
 import './app/tabbar/visitorInfo';
 import './app/tabbar/visitorNavigation';
 import './app/tabbar/visitorTranscript';
+
+//Custo
+import './app/tabbar/DownloadTranscript';

@@ -32,3 +32,13 @@ addAction(QuickActionsEnum.CloseChat, {
 	order: 5,
 	color: 'danger',
 });
+
+//Custo -> 'DownloadTranscript' keyword
+addAction(QuickActionsEnum.DownloadTranscript, {
+	groups: ['live'],
+	id: QuickActionsEnum.DownloadTranscript,
+	title: 'Download_Transcript',
+	icon: 'download',
+	order: 7,
+	color: 'black',
+});

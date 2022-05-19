@@ -9,6 +9,7 @@ import PlaceChatOnHoldModal from '../../../../../../../ee/app/livechat-enterpris
 import CloseChatModal from '../../../../../../components/Omnichannel/modals/CloseChatModal';
 import CloseChatModalData from '../../../../../../components/Omnichannel/modals/CloseChatModalData';
 import ForwardChatModal from '../../../../../../components/Omnichannel/modals/ForwardChatModal';
+import DownloadTranscriptModal from '../../../../../../components/Omnichannel/modals/DownloadTranscriptModal';
 import ReturnChatQueueModal from '../../../../../../components/Omnichannel/modals/ReturnChatQueueModal';
 import TranscriptModal from '../../../../../../components/Omnichannel/modals/TranscriptModal';
 import { usePermission, useRole } from '../../../../../../contexts/AuthorizationContext';
@@ -229,6 +230,15 @@ export const useQuickActions = (
 			case QuickActionsEnum.ChatForward:
 				setModal(<ForwardChatModal room={room} onForward={handleForwardChat} onCancel={closeModal} />);
 				break;
+
+
+			// Custo
+			case QuickActionsEnum.DownloadTranscript:
+				setModal(<DownloadTranscriptModal room={room} onCancel={closeModal}/>);
+				break;
+			// Custo
+
+			
 			case QuickActionsEnum.CloseChat:
 				setModal(
 					room.departmentId ? (
@@ -273,6 +283,8 @@ export const useQuickActions = (
 				return !!roomOpen && (canCloseRoom || canCloseOthersRoom);
 			case QuickActionsEnum.OnHoldChat:
 				return !!roomOpen && canPlaceChatOnHold;
+			case QuickActionsEnum.DownloadTranscript:
+				return true;
 			default:
 				break;
 		}
